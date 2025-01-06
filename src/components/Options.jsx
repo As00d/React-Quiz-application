@@ -1,3 +1,4 @@
+import { NextComponent } from "./NextComponent";
 function Options({ question, dispatch, answer }) {
   const hasAnswered = answer != null;
   return (
@@ -21,16 +22,6 @@ function Options({ question, dispatch, answer }) {
             </button>
           );
         })}
-      </div>
-      <div>
-        {hasAnswered && (
-          <button
-            className="btn btn-ui"
-            onClick={() => dispatch({ type: "nextQuestion" })}
-          >
-            Next
-          </button>
-        )}
       </div>
     </>
   );
